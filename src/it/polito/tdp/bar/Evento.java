@@ -9,6 +9,7 @@ public class Evento {
 	public enum TipoEvento{
 		ARRIVO_GRUPPO_CLIENTI ,
 		USCITA , 
+		SEDUTI , 
 	}
 	
 	private LocalTime time ;
@@ -16,6 +17,47 @@ public class Evento {
 	private int numPersone ;
 	private Duration permanenza ;
 	private double tolleranza ;
+	
+	public int getNumPersone() {
+		return numPersone;
+	}
+
+	public void setNumPersone(int numPersone) {
+		this.numPersone = numPersone;
+	}
+
+	public TipoEvento getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(TipoEvento tipo) {
+		this.tipo = tipo;
+	}
+
+	public LocalTime getTime() {
+		return time;
+	}
+
+	public void setTime(LocalTime time) {
+		this.time = time;
+	}
+
+	public Duration getPermanenza() {
+		return permanenza;
+	}
+
+	public void setPermanenza(Duration permanenza) {
+		this.permanenza = permanenza;
+	}
+
+	public double getTolleranza() {
+		return tolleranza;
+	}
+
+	public void setTolleranza(double tolleranza) {
+		this.tolleranza = tolleranza;
+	}
+
 	private Random x = new Random() ;
 	
 	public Evento(LocalTime time, TipoEvento tipo ) {
